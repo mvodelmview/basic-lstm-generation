@@ -16,7 +16,8 @@ class ModelLSTM:
     
     def __init__(self, text):
         '''
-        Input: single string of text (as a python string). Could be section of novels, concatenated product reviews, or something else
+        Input: single string of text (as a python string). Could be section of novels, 
+        concatenated product reviews, or something else
         
         '''
         print("Vectorizing text sequence...")
@@ -71,7 +72,8 @@ class ModelLSTM:
         
     def train(self, epochs=100):
         '''
-        method to train the model, separated from compilation method (init_model) because training takes a significant amount of time
+        method to train the model, separated from compilation method (init_model) 
+        because training takes a significant amount of time
         
         '''
         self.model.fit(self.subseqs, self.target_chars, batch_size=128, callbacks=self.callbacks, epochs=epochs)
@@ -79,7 +81,8 @@ class ModelLSTM:
         
     def sample_index(self, prediction, randomness):
         '''
-        helper method, receives probability distribution of character index ("prediction") and randomness scalar which makes 
+        helper method, receives probability distribution 
+        of character index ("prediction") and randomness scalar which makes 
         predictions more random (and interesting)
         
         '''
