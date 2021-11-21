@@ -112,7 +112,7 @@ class ModelLSTM:
         review = ""
         i = 1
 
-        while i <= 400:
+        while i <= content_length:
             seed_sample = np.zeros((1, len(text_seed), len(self.unique_chars)))
             for i, char_index in enumerate(text_seed):
                 seed_sample[0, i, self.char_indices[char_index]] = 1
